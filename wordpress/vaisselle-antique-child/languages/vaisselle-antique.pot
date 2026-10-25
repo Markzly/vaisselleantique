@@ -1,0 +1,75 @@
+# Translation template for the Vaisselle Antique child theme.
+# Copy to <locale>.po (e.g. de_DE.po) to add another language.
+msgid ""
+msgstr ""
+"Project-Id-Version: Vaisselle Antique 1.2.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: vaisselle-antique\n"
+
+msgid "Every piece we carry is antique, vintage, or secondhand. Wear consistent with age — small marks, light scratching, faint traces of use — is part of the piece's history, not a flaw, and it's priced and described with that in mind."
+msgstr ""
+
+msgid "We do our best to photograph and describe each item's condition in detail. Please look closely at the photos before ordering, as very minor marks or glaze irregularities don't always show up on camera."
+msgstr ""
+
+msgid "Actual colour can vary slightly from the photos shown, depending on your screen."
+msgstr ""
+
+msgid "These are antique and vintage tableware pieces, sold as decorative objects; how you use them is left to your judgement."
+msgstr ""
+
+msgid "Packaging may include reused materials — thank you for your understanding. We're unable to accept returns, so please make sure you're comfortable with an item's condition before ordering."
+msgstr ""
+
+msgid "Vaisselle Antique"
+msgstr ""
+
+msgid "Texts shown on every product page. Leave a field empty to use the default text, which is already translated into French."
+msgstr ""
+
+msgid "Show the \"Please note\" condition notice"
+msgstr ""
+
+msgid "Condition notice text"
+msgstr ""
+
+msgid "Separate paragraphs with a blank line."
+msgstr ""
+
+msgid "Please note"
+msgstr ""
+
+msgid "Back to all items"
+msgstr ""
+
+msgid "Buy now"
+msgstr ""
+
+msgid "New arrivals"
+msgstr ""
+
+msgid "Discover"
+msgstr ""
+
+msgid "View more"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "View all"
+msgstr ""
+
+msgid "Home page banner photo"
+msgstr ""
+
+msgid "Leave empty to use the placeholder. Best: a landscape photo about 1600px wide, with no text on it."
+msgstr ""
+
+msgid "Category sections on the home page"
+msgstr ""
+
+msgid "Category slugs, separated by commas, in the order you want. Default: terre-de-fer,blanche,decoration. Empty categories are skipped."
+msgstr ""

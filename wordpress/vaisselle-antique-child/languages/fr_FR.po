@@ -1,0 +1,78 @@
+# French translation of the Vaisselle Antique child theme.
+# WordPress reads fr_FR.l10n.php (same strings). If you edit this file in
+# Poedit or Loco Translate, let it regenerate the compiled files too.
+msgid ""
+msgstr ""
+"Project-Id-Version: Vaisselle Antique 1.2.0\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: vaisselle-antique\n"
+
+msgid "Every piece we carry is antique, vintage, or secondhand. Wear consistent with age — small marks, light scratching, faint traces of use — is part of the piece's history, not a flaw, and it's priced and described with that in mind."
+msgstr "Toutes nos pièces sont anciennes, vintage ou de seconde main. Une usure liée à l'âge — petites marques, rayures légères, traces d'usage discrètes — fait partie de l'histoire de la pièce et n'est pas un défaut ; elle est prise en compte dans le prix et la description."
+
+msgid "We do our best to photograph and describe each item's condition in detail. Please look closely at the photos before ordering, as very minor marks or glaze irregularities don't always show up on camera."
+msgstr "Nous faisons de notre mieux pour photographier et décrire en détail l'état de chaque objet. Merci d'examiner attentivement les photos avant de commander : de très légères marques ou irrégularités d'émail ne sont pas toujours visibles à l'image."
+
+msgid "Actual colour can vary slightly from the photos shown, depending on your screen."
+msgstr "Les couleurs réelles peuvent légèrement différer des photos selon votre écran."
+
+msgid "These are antique and vintage tableware pieces, sold as decorative objects; how you use them is left to your judgement."
+msgstr "Il s'agit de pièces de vaisselle anciennes et vintage, vendues comme objets décoratifs ; leur usage est laissé à votre appréciation."
+
+msgid "Packaging may include reused materials — thank you for your understanding. We're unable to accept returns, so please make sure you're comfortable with an item's condition before ordering."
+msgstr "Nos colis peuvent contenir des matériaux d'emballage réutilisés — merci de votre compréhension. Nous ne pouvons pas accepter de retours : assurez-vous que l'état d'un objet vous convient avant de commander."
+
+msgid "Vaisselle Antique"
+msgstr "Vaisselle Antique"
+
+msgid "Texts shown on every product page. Leave a field empty to use the default text, which is already translated into French."
+msgstr "Textes affichés sur chaque page produit. Laissez un champ vide pour utiliser le texte par défaut, déjà traduit en français."
+
+msgid "Show the \"Please note\" condition notice"
+msgstr "Afficher l'avis « À noter » sur l'état des pièces"
+
+msgid "Condition notice text"
+msgstr "Texte de l'avis sur l'état"
+
+msgid "Separate paragraphs with a blank line."
+msgstr "Séparez les paragraphes par une ligne vide."
+
+msgid "Please note"
+msgstr "À noter"
+
+msgid "Back to all items"
+msgstr "Retour à tous les articles"
+
+msgid "Buy now"
+msgstr "Acheter maintenant"
+
+msgid "New arrivals"
+msgstr "Nouveautés"
+
+msgid "Discover"
+msgstr "Découvrir"
+
+msgid "View more"
+msgstr "Voir plus"
+
+msgid "Categories"
+msgstr "Catégories"
+
+msgid "View all"
+msgstr "Voir tout"
+
+msgid "Home page banner photo"
+msgstr "Photo de la bannière d'accueil"
+
+msgid "Leave empty to use the placeholder. Best: a landscape photo about 1600px wide, with no text on it."
+msgstr "Laissez vide pour utiliser l'image provisoire. Idéal : une photo horizontale d'environ 1600 px de large, sans texte."
+
+msgid "Category sections on the home page"
+msgstr "Sections de catégories sur la page d'accueil"
+
+msgid "Category slugs, separated by commas, in the order you want. Default: terre-de-fer,blanche,decoration. Empty categories are skipped."
+msgstr "Identifiants (slugs) des catégories, séparés par des virgules, dans l'ordre souhaité. Par défaut : terre-de-fer,blanche,decoration. Les catégories vides sont ignorées."

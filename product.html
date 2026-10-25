@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="titleProduct">Bocal d'apothicaire en verre soufflé — Vaisselle Antique</title>
+
+<!--
+  SINGLE PRODUCT PAGE
+  --------------------
+  In WordPress this becomes: header.php + WooCommerce's single-product.php
+  (content-single-product.php). The gallery + summary block below mirrors
+  WooCommerce's real markup (.woocommerce-product-gallery, .summary.entry-summary,
+  .single_add_to_cart_button) so it's a close drop-in. See README.md.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="woocommerce woocommerce-page single single-product">
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="lang-switch" role="group" aria-label="Langue / Language">
+      <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">FR</button>
+      <span aria-hidden="true">|</span>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a href="#" class="icon-link icon-account" aria-label="Mon compte" data-i18n-attr="aria-label:account">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+    </a>
+    <a href="#" class="icon-link icon-cart" aria-label="Panier" data-i18n-attr="aria-label:cart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8h16l-1.5 11a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7L4 8Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+    </a>
+  </div>
+
+  <div class="site-branding">
+    <div class="site-logo"><a href="index.html"><img src="images/logo.png" alt="Vaisselle Antique" class="logo-img"></a></div>
+    <p class="site-tagline">from france with love</p>
+  </div>
+
+  <nav class="main-navigation">
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-i18n-attr="aria-label:toggleMenu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="index.html" data-i18n="navHome">ACCUEIL</a></li>
+      <li><a href="categories.html" data-i18n="navCats">CATÉGORIES</a></li>
+      <li><a href="about.html" data-i18n="navAbout">À PROPOS</a></li>
+      <li><a href="contact.html" data-i18n="navContact">CONTACT</a></li>
+    </ul>
+    <form class="search-form" role="search" action="shop.html" method="get">
+      <label class="screen-reader-text" for="site-search" data-i18n="searchLabel">Rechercher des articles</label>
+      <input type="search" id="site-search" name="s" placeholder="Rechercher des articles" data-i18n-attr="placeholder:searchLabel">
+      <button type="submit" aria-label="Rechercher" data-i18n-attr="aria-label:search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+    </form>
+  </nav>
+</header>
+
+<main class="site-main">
+  <div class="product" itemscope itemtype="https://schema.org/Product">
+
+    <!-- Gallery ------------------------------------------------------ -->
+    <div class="images woocommerce-product-gallery">
+      <div class="woocommerce-product-gallery__wrapper">
+        <div class="woocommerce-product-gallery__image main-image">
+          <img src="images/tone-1.jpg" alt="Bocal d'apothicaire en verre soufflé" data-i18n-attr="alt:p1" id="main-product-image">
+        </div>
+      </div>
+
+      <!--
+        NOTE: WooCommerce's native gallery uses a slider (Flexslider) for
+        thumbnails, not a static grid. This grid-of-thumbnails behaviour is
+        recreated with a small script in js/main.js — see README.md if you'd
+        rather keep WooCommerce's default slider instead.
+      -->
+      <div class="gallery-thumbs" id="gallery-thumbs">
+        <button type="button" class="thumb active" data-full="images/tone-1.jpg" aria-label="Afficher la photo 1" aria-pressed="true"><img src="images/tone-1.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-2.jpg" aria-label="Afficher la photo 2" aria-pressed="false"><img src="images/tone-2.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-3.jpg" aria-label="Afficher la photo 3" aria-pressed="false"><img src="images/tone-3.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-4.jpg" aria-label="Afficher la photo 4" aria-pressed="false"><img src="images/tone-4.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-5.jpg" aria-label="Afficher la photo 5" aria-pressed="false"><img src="images/tone-5.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-6.jpg" aria-label="Afficher la photo 6" aria-pressed="false"><img src="images/tone-6.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-1.jpg" aria-label="Afficher la photo 7" aria-pressed="false"><img src="images/tone-1.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-2.jpg" aria-label="Afficher la photo 8" aria-pressed="false"><img src="images/tone-2.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-3.jpg" aria-label="Afficher la photo 9" aria-pressed="false"><img src="images/tone-3.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-4.jpg" aria-label="Afficher la photo 10" aria-pressed="false"><img src="images/tone-4.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-5.jpg" aria-label="Afficher la photo 11" aria-pressed="false"><img src="images/tone-5.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-6.jpg" aria-label="Afficher la photo 12" aria-pressed="false"><img src="images/tone-6.jpg" alt=""></button>
+        <button type="button" class="thumb" data-full="images/tone-1.jpg" aria-label="Afficher la photo 13" aria-pressed="false"><img src="images/tone-1.jpg" alt=""></button>
+      </div>
+    </div>
+
+    <!-- Summary -------------------------------------------------------->
+    <div class="summary entry-summary">
+      <h1 class="product_title entry-title" data-i18n="p1">Bocal d'apothicaire en verre soufflé</h1>
+      <p class="price"><span class="woocommerce-Price-amount amount">85&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></p>
+
+      <!-- "Buy now" = add to cart + go straight to checkout. On WordPress the
+           child theme adds this button automatically to every product. -->
+      <form class="cart" action="#" method="post">
+        <div class="purchase-row">
+          <button type="submit" class="single_add_to_cart_button button alt" data-i18n="addToCart">Ajouter au panier</button>
+          <button type="submit" class="buy-now-button button" data-i18n="buyNow">Acheter maintenant</button>
+        </div>
+      </form>
+
+      <div class="woocommerce-product-details__short-description">
+        <p data-i18n="desc1">Soufflé au début des années 1900 pour une pharmacie de village, ce bocal porte les douces imperfections du travail à la main : de minuscules bulles prises dans le verre et une légère ondulation le long du corps.</p>
+        <p data-i18n="desc2">C'est un exemplaire plus petit d'une forme que l'on trouve généralement en bien plus grand, ce qui le rend facile à placer : une table d'appoint, une étagère de salle de bain, partout où il peut capter la lumière.</p>
+        <p data-i18n="desc3">Le couvercle tient en place mais ne ferme pas hermétiquement : il convient donc mieux au rangement de produits secs qu'à une conservation étanche.</p>
+      </div>
+
+      <ul class="product-meta">
+        <li><span class="label" data-i18n="metaDimLabel">Dimensions :</span> <span data-i18n="metaDimValue">env. 11 cm de diamètre &times; 19 cm de hauteur</span></li>
+        <li><span class="label" data-i18n="metaSkuLabel">Réf.</span> AT-0142</li>
+      </ul>
+
+      <div class="product-notice">
+        <h2 data-i18n="noteTitle">À noter</h2>
+        <p data-i18n="note1">Toutes nos pièces sont anciennes, vintage ou de seconde main. Une usure liée à l'âge — petites marques, rayures légères, traces d'usage discrètes — fait partie de l'histoire de la pièce et n'est pas un défaut ; elle est prise en compte dans le prix et la description.</p>
+        <p data-i18n="note2">Nous faisons de notre mieux pour photographier et décrire en détail l'état de chaque objet. Merci d'examiner attentivement les photos avant de commander : de très légères marques ou irrégularités d'émail ne sont pas toujours visibles à l'image.</p>
+        <p data-i18n="note3">Les couleurs réelles peuvent légèrement différer des photos selon votre écran.</p>
+        <p data-i18n="note4">Il s'agit de pièces de vaisselle anciennes et vintage, vendues comme objets décoratifs ; leur usage est laissé à votre appréciation.</p>
+        <p data-i18n="note5">Nos colis peuvent contenir des matériaux d'emballage réutilisés — merci de votre compréhension. Nous ne pouvons pas accepter de retours : assurez-vous que l'état d'un objet vous convient avant de commander.</p>
+      </div>
+
+      <button type="button" class="single_add_to_cart_button button alt" data-i18n="addToCart">Ajouter au panier</button>
+
+      <a href="shop.html" class="back-to-shop" data-i18n="backToAll">&larr; Retour à tous les articles</a>
+    </div>
+  </div>
+
+  <!-- Recently viewed --------------------------------------------------->
+  <section class="recently-viewed">
+    <h2 class="section-title" data-i18n="recentlyViewed">Vus récemment</h2>
+    <ul class="products columns-4">
+      <li class="product">
+        <a href="product.html" class="product-link">
+          <span class="product-thumb"><img src="images/tone-3.jpg" alt="Assiette en terre de fer peinte à la main" data-i18n-attr="alt:p3" loading="lazy"></span>
+          <h2 class="woocommerce-loop-product__title" data-i18n="p3">Assiette en terre de fer peinte à la main</h2>
+          <span class="price"><span class="woocommerce-Price-amount amount">70&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Other products ---------------------------------------------------->
+  <section class="other-products">
+    <h2 class="section-title" data-i18n="moreFromShop">Plus de la boutique</h2>
+    <ul class="products columns-6">
+      <li class="product">
+        <a href="product.html" class="product-link">
+          <span class="product-thumb"><img src="images/tone-3.jpg" alt="Assiette à dessert à décor floral imprimé" data-i18n-attr="alt:p7" loading="lazy"></span>
+          <h2 class="woocommerce-loop-product__title" data-i18n="p7">Assiette à dessert à décor floral imprimé</h2>
+          <span class="price"><span class="woocommerce-Price-amount amount">45&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+        </a>
+      </li>
+      <li class="product">
+        <a href="product.html" class="product-link">
+          <span class="product-thumb"><img src="images/tone-1.jpg" alt="Tasse à café et soucoupe, muguet" data-i18n-attr="alt:p8" loading="lazy"></span>
+          <h2 class="woocommerce-loop-product__title" data-i18n="p8">Tasse à café et soucoupe, muguet</h2>
+          <span class="price"><span class="woocommerce-Price-amount amount">68&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+        </a>
+      </li>
+      <li class="product">
+        <a href="product.html" class="product-link">
+          <span class="product-thumb"><img src="images/tone-5.jpg" alt="Gobelet à pied en verre moulé" data-i18n-attr="alt:p9" loading="lazy"></span>
+          <h2 class="woocommerce-loop-product__title" data-i18n="p9">Gobelet à pied en verre moulé</h2>
+          <span class="price"><span class="woocommerce-Price-amount amount">18&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+        </a>
+      </li>
+      <li class="product">
+        <a href="product.html" class="product-link">
+          <span class="product-thumb"><img src="images/tone-2.jpg" alt="Assiette plate en terre de fer à motif en relief" data-i18n-attr="alt:p10" loading="lazy"></span>
+          <h2 class="woocommerce-loop-product__title" data-i18n="p10">Assiette plate en terre de fer à motif en relief</h2>
+          <span class="price"><span class="woocommerce-Price-amount amount">40&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+        </a>
+      </li>
+      <li class="product">
+        <a href="product.html" class="product-link">
+          <span class="product-thumb"><img src="images/tone-4.jpg" alt="Assiette plate octogonale à bord perlé" data-i18n-attr="alt:p11" loading="lazy"></span>
+          <h2 class="woocommerce-loop-product__title" data-i18n="p11">Assiette plate octogonale à bord perlé</h2>
+          <span class="price"><span class="woocommerce-Price-amount amount">55&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+        </a>
+      </li>
+      <li class="product">
+        <a href="product.html" class="product-link">
+          <span class="product-thumb"><img src="images/tone-6.jpg" alt="Assiette à dessert, motif oiseau et vigne" data-i18n-attr="alt:p12" loading="lazy"></span>
+          <h2 class="woocommerce-loop-product__title" data-i18n="p12">Assiette à dessert, motif oiseau et vigne</h2>
+          <span class="price"><span class="woocommerce-Price-amount amount">28&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<aside class="category-widget widget woocommerce widget_product_categories">
+  <h3 class="widget-title" data-i18n="categoryTitle">Catégories</h3>
+  <ul>
+    <li><a href="shop.html?cat=terre-de-fer" data-cat="terre-de-fer" data-i18n="cat:terre-de-fer">Terre de fer</a></li>
+    <li><a href="shop.html?cat=blanche" data-cat="blanche" data-i18n="cat:blanche">Blanche</a></li>
+    <li><a href="shop.html?cat=decoration" data-cat="decoration" data-i18n="cat:decoration">Décoration</a></li>
+  </ul>
+</aside>
+
+<div class="back-to-shop-wrap">
+  <a href="shop.html" class="button" data-i18n="backToAllBtn">Retour à tous les articles</a>
+</div>
+<footer class="site-footer">
+  <ul class="footer-links">
+    <li><a href="#" data-i18n="privacy">Politique de confidentialité</a></li>
+    <li><a href="#" data-i18n="terms">Conditions générales de vente</a></li>
+  </ul>
+  <p class="copyright">&copy; Vaisselle Antique</p>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

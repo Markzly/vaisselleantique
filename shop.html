@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="titleShop">Tous les articles — Vaisselle Antique</title>
+
+<!--
+  SHOP PAGE (all items, category filter, search)
+  In WordPress: WooCommerce's Shop page + product category archives.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="woocommerce woocommerce-page archive post-type-archive-product">
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="lang-switch" role="group" aria-label="Langue / Language">
+      <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">FR</button>
+      <span aria-hidden="true">|</span>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a href="#" class="icon-link icon-account" aria-label="Mon compte" data-i18n-attr="aria-label:account">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+    </a>
+    <a href="#" class="icon-link icon-cart" aria-label="Panier" data-i18n-attr="aria-label:cart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8h16l-1.5 11a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7L4 8Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+    </a>
+  </div>
+
+  <div class="site-branding">
+    <div class="site-logo"><a href="index.html"><img src="images/logo.png" alt="Vaisselle Antique" class="logo-img"></a></div>
+    <p class="site-tagline">from france with love</p>
+  </div>
+
+  <nav class="main-navigation">
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-i18n-attr="aria-label:toggleMenu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="index.html" data-i18n="navHome">ACCUEIL</a></li>
+      <li><a href="categories.html" data-i18n="navCats">CATÉGORIES</a></li>
+      <li><a href="about.html" data-i18n="navAbout">À PROPOS</a></li>
+      <li><a href="contact.html" data-i18n="navContact">CONTACT</a></li>
+    </ul>
+    <form class="search-form" role="search" action="shop.html" method="get">
+      <label class="screen-reader-text" for="site-search" data-i18n="searchLabel">Rechercher des articles</label>
+      <input type="search" id="site-search" name="s" placeholder="Rechercher des articles" data-i18n-attr="placeholder:searchLabel">
+      <button type="submit" aria-label="Rechercher" data-i18n-attr="aria-label:search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+    </form>
+  </nav>
+</header>
+
+<main class="site-main">
+  <h1 class="page-title" id="shop-title" data-i18n="allItems">Tous les articles</h1>
+
+  <!--
+    data-shop-grid: js/main.js filters this list by ?cat=<slug> (category
+    links) and ?s=<words> (search box). In WordPress, WooCommerce does this
+    itself: the Shop page, each product category page and search results
+    all use this same grid.
+  -->
+  <ul class="products columns-3" data-shop-grid>
+
+    <li class="product" data-cat="decoration">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-1.jpg" alt="Bocal d'apothicaire en verre soufflé" data-i18n-attr="alt:p1" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p1">Bocal d'apothicaire en verre soufflé</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">85&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+    <li class="product" data-cat="decoration">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-2.jpg" alt="Pot à moutarde en céramique" data-i18n-attr="alt:p2" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p2">Pot à moutarde en céramique</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">12&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+    <li class="product" data-cat="terre-de-fer">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-3.jpg" alt="Assiette en terre de fer peinte à la main" data-i18n-attr="alt:p3" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p3">Assiette en terre de fer peinte à la main</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">70&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+    <li class="product" data-cat="decoration">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-4.jpg" alt="Petit bocal à confiture en verre soufflé (a)" data-i18n-attr="alt:p4" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p4">Petit bocal à confiture en verre soufflé (a)</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">32&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+    <li class="product" data-cat="decoration">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-5.jpg" alt="Petit bocal à confiture en verre soufflé (b)" data-i18n-attr="alt:p5" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p5">Petit bocal à confiture en verre soufflé (b)</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">32&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+    <li class="product" data-cat="decoration">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-6.jpg" alt="Petit bocal à confiture en verre soufflé (c)" data-i18n-attr="alt:p6" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p6">Petit bocal à confiture en verre soufflé (c)</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">32&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+    <li class="product" data-cat="blanche">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-3.jpg" alt="Assiette à dessert à décor floral imprimé" data-i18n-attr="alt:p7" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p7">Assiette à dessert à décor floral imprimé</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">45&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+    <li class="product" data-cat="blanche">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-1.jpg" alt="Tasse à café et soucoupe, muguet" data-i18n-attr="alt:p8" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p8">Tasse à café et soucoupe, muguet</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">68&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+    <li class="product" data-cat="blanche">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-5.jpg" alt="Gobelet à pied en verre moulé" data-i18n-attr="alt:p9" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p9">Gobelet à pied en verre moulé</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">18&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+    <li class="product" data-cat="terre-de-fer">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-2.jpg" alt="Assiette plate en terre de fer à motif en relief" data-i18n-attr="alt:p10" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p10">Assiette plate en terre de fer à motif en relief</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">40&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+    <li class="product" data-cat="blanche">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-4.jpg" alt="Assiette plate octogonale à bord perlé" data-i18n-attr="alt:p11" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p11">Assiette plate octogonale à bord perlé</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">55&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+    <li class="product" data-cat="blanche">
+      <a href="product.html" class="product-link">
+        <span class="product-thumb"><img src="images/tone-6.jpg" alt="Assiette à dessert, motif oiseau et vigne" data-i18n-attr="alt:p12" class="attachment-woocommerce_thumbnail" loading="lazy"></span>
+        <h2 class="woocommerce-loop-product__title" data-i18n="p12">Assiette à dessert, motif oiseau et vigne</h2>
+        <span class="price"><span class="woocommerce-Price-amount amount">28&nbsp;<span class="woocommerce-Price-currencySymbol">€</span></span></span>
+      </a>
+    </li>
+
+  </ul>
+
+  <p class="shop-empty" hidden><span data-i18n="shopEmpty">Aucun article ne correspond pour le moment.</span> <a href="shop.html" data-i18n="seeAll">Voir tous les articles</a></p>
+</main>
+
+<aside class="category-widget widget woocommerce widget_product_categories">
+  <h3 class="widget-title" data-i18n="categoryTitle">Catégories</h3>
+  <ul>
+    <li><a href="shop.html?cat=terre-de-fer" data-cat="terre-de-fer" data-i18n="cat:terre-de-fer">Terre de fer</a></li>
+    <li><a href="shop.html?cat=blanche" data-cat="blanche" data-i18n="cat:blanche">Blanche</a></li>
+    <li><a href="shop.html?cat=decoration" data-cat="decoration" data-i18n="cat:decoration">Décoration</a></li>
+  </ul>
+</aside>
+
+<div class="social-links">
+  <a href="https://www.instagram.com/vaisselle_antique_bis/" target="_blank" rel="noopener" aria-label="Vaisselle Antique sur Instagram" data-i18n-attr="aria-label:instagramLabel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
+  </a>
+</div>
+
+<footer class="site-footer">
+  <ul class="footer-links">
+    <li><a href="#" data-i18n="privacy">Politique de confidentialité</a></li>
+    <li><a href="#" data-i18n="terms">Conditions générales de vente</a></li>
+  </ul>
+  <p class="copyright">&copy; Vaisselle Antique</p>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

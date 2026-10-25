@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="titleAbout">À propos — Vaisselle Antique</title>
+
+<!--
+  ABOUT PAGE
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Lora:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="lang-switch" role="group" aria-label="Langue / Language">
+      <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">FR</button>
+      <span aria-hidden="true">|</span>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a href="#" class="icon-link icon-account" aria-label="Mon compte" data-i18n-attr="aria-label:account">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+    </a>
+    <a href="#" class="icon-link icon-cart" aria-label="Panier" data-i18n-attr="aria-label:cart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8h16l-1.5 11a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7L4 8Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+    </a>
+  </div>
+
+  <div class="site-branding">
+    <div class="site-logo"><a href="index.html"><img src="images/logo.png" alt="Vaisselle Antique" class="logo-img"></a></div>
+    <p class="site-tagline">from france with love</p>
+  </div>
+
+  <nav class="main-navigation">
+    <button class="nav-toggle" aria-label="Ouvrir le menu" data-i18n-attr="aria-label:toggleMenu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu">
+      <li><a href="index.html" data-i18n="navHome">ACCUEIL</a></li>
+      <li><a href="categories.html" data-i18n="navCats">CATÉGORIES</a></li>
+      <li><a href="about.html" class="active" aria-current="page" data-i18n="navAbout">À PROPOS</a></li>
+      <li><a href="contact.html" data-i18n="navContact">CONTACT</a></li>
+    </ul>
+    <form class="search-form" role="search" action="shop.html" method="get">
+      <label class="screen-reader-text" for="site-search" data-i18n="searchLabel">Rechercher des articles</label>
+      <input type="search" id="site-search" name="s" placeholder="Rechercher des articles" data-i18n-attr="placeholder:searchLabel">
+      <button type="submit" aria-label="Rechercher" data-i18n-attr="aria-label:search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+    </form>
+  </nav>
+</header>
+
+<!--
+  ABOUT PAGE — placeholder copy, replace with your own story.
+  Keep the data-i18n keys and update the English in js/i18n.js.
+  Empty boxes (.about-photo--empty) are photo slots: put an <img> inside
+  and remove the "--empty" class.
+  In WordPress: Pages → Add New "À propos", translated with TranslatePress.
+-->
+
+<!-- Banner -------------------------------------------------------------->
+<section class="about-hero">
+  <div class="about-hero__inner">
+    <img src="images/about-banner.jpg" alt="Étagère de vaisselle ancienne en faïence bleue et blanche" data-i18n-attr="alt:aboutBannerAlt" class="about-hero__img">
+    <div class="about-hero__content">
+      <p class="about-kicker" data-i18n="aboutKicker">notre histoire</p>
+      <h1 class="about-hero__title" data-i18n="aboutHeading">À propos</h1>
+      <a href="#histoire" class="about-link about-link--light" data-i18n="aboutDiscover">découvrir</a>
+    </div>
+  </div>
+</section>
+
+<main class="site-main about-page">
+
+  <!-- Intro: quote + two text columns ----------------------------------->
+  <section class="about-intro" id="histoire">
+    <p class="about-quote" data-i18n="aboutQuote">Vaisselle ancienne,<br>charme français</p>
+    <div class="about-columns">
+      <p data-i18n="about1">Vaisselle Antique, c'est une petite sélection de vaisselle ancienne et vintage : assiettes en terre de fer, verres soufflés, tasses et pots, chinés un par un.</p>
+      <p data-i18n="about2">Chaque pièce est choisie pour son histoire et son charme, nettoyée avec soin, puis photographiée sous tous les angles pour que vous sachiez exactement ce que vous recevrez.</p>
+    </div>
+  </section>
+
+  <!-- Two photos + "Nos trouvailles" ------------------------------------->
+  <section class="about-feature">
+    <div class="about-feature__photos">
+      <figure>
+        <div class="about-photo about-photo--scene"><img src="images/story-1.jpg" alt="Théière et assiette en faïence aux oiseaux bleus, chandeliers en verre" data-i18n-attr="alt:storyAlt1" loading="lazy"></div>
+        <figcaption data-i18n="aboutPhoto1">Faïence aux oiseaux</figcaption>
+      </figure>
+      <figure>
+        <div class="about-photo about-photo--scene"><img src="images/story-2.jpg" alt="Service à café en porcelaine fleurie sur une étagère en bois" data-i18n-attr="alt:storyAlt2" loading="lazy"></div>
+        <figcaption data-i18n="aboutPhoto2">Porcelaine fleurie</figcaption>
+      </figure>
+    </div>
+    <div class="about-feature__text">
+      <h2 class="about-feature__title" data-i18n="aboutFindsTitle">Nos trouvailles</h2>
+      <p data-i18n="aboutFindsText">Des pièces simples et singulières, chinées en France, pour habiller votre table avec caractère.</p>
+      <a href="shop.html" class="about-link" data-i18n="aboutSeeShop">voir la boutique</a>
+    </div>
+  </section>
+
+  <!-- Story: one shelf, then two of its pieces up close ------------------>
+  <section class="about-story">
+    <div class="about-story__intro">
+      <p class="about-story__text" data-i18n="aboutStoryText">Chaque étagère raconte une histoire&nbsp;: une cafetière blanche, un flacon en verre, un coffret en laiton doré… puis, de plus près, les détails qui font leur charme.</p>
+      <div class="about-photo about-photo--wide"><img src="images/story-3.jpg" alt="Cafetière blanche, flacon et coffret en laiton doré sur une étagère" data-i18n-attr="alt:storyAlt3" loading="lazy"></div>
+    </div>
+    <div class="about-story__details">
+      <figure>
+        <div class="about-photo about-photo--scene"><img src="images/story-4.jpg" alt="Flacon en verre et coffret en laiton doré" data-i18n-attr="alt:storyAlt4" loading="lazy"></div>
+        <figcaption data-i18n="aboutPhoto3">Laiton doré</figcaption>
+      </figure>
+      <figure>
+        <div class="about-photo about-photo--scene"><img src="images/story-5.jpg" alt="Cafetière blanche à pans, tasse et soucoupe" data-i18n-attr="alt:storyAlt5" loading="lazy"></div>
+        <figcaption data-i18n="aboutPhoto4">Blanc d'autrefois</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Instagram -------------------------------------------------------->
+  <section class="about-closing">
+    <div class="about-photo about-photo--small"><img src="images/about-banner.jpg" alt="" loading="lazy" style="object-position: 45% 70%"></div>
+    <div class="about-closing__text">
+      <p data-i18n="about3">La boutique est née sur Instagram, où chaque nouvelle trouvaille est présentée en premier. Suivez-nous pour découvrir les pièces avant tout le monde.</p>
+      <a href="https://www.instagram.com/vaisselle_antique_bis/" target="_blank" rel="noopener" class="about-link" data-i18n="followInstagram">Suivre sur Instagram</a>
+    </div>
+  </section>
+</main>
+
+<aside class="category-widget widget woocommerce widget_product_categories">
+  <h3 class="widget-title" data-i18n="categoryTitle">Catégories</h3>
+  <ul>
+    <li><a href="shop.html?cat=terre-de-fer" data-cat="terre-de-fer" data-i18n="cat:terre-de-fer">Terre de fer</a></li>
+    <li><a href="shop.html?cat=blanche" data-cat="blanche" data-i18n="cat:blanche">Blanche</a></li>
+    <li><a href="shop.html?cat=decoration" data-cat="decoration" data-i18n="cat:decoration">Décoration</a></li>
+  </ul>
+</aside>
+
+<div class="social-links">
+  <a href="https://www.instagram.com/vaisselle_antique_bis/" target="_blank" rel="noopener" aria-label="Vaisselle Antique sur Instagram" data-i18n-attr="aria-label:instagramLabel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
+  </a>
+</div>
+
+<footer class="site-footer">
+  <ul class="footer-links">
+    <li><a href="#" data-i18n="privacy">Politique de confidentialité</a></li>
+    <li><a href="#" data-i18n="terms">Conditions générales de vente</a></li>
+  </ul>
+  <p class="copyright">&copy; Vaisselle Antique</p>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,539 @@
+/* ==========================================================================
+   VAISSELLE ANTIQUE — WooCommerce styles for the Blocksy child theme
+   ==========================================================================
+   Ported from antique-shop-template/css/style.css (the design reference).
+   Only shop/product rules live here. Header, footer, menu, logo and page
+   background are set in Blocksy's Customizer (see WORDPRESS-SETUP.md), so
+   they stay editable without code.
+
+   Colours and fonts are variables, same values as the template. The --va-
+   prefix keeps them from clashing with Blocksy's own variables.
+
+   Blocksy wraps some WooCommerce markup in its own elements and can change
+   between versions. If a rule here doesn't take effect, inspect the element
+   in the browser and adjust the selector — don't hunt for one-off colours.
+   ========================================================================== */
+
+:root {
+  --va-bg:            #ffffff;
+  --va-text:          #2e2c27;
+  --va-text-muted:    #8c8a7b;
+  --va-border:        #e6e1d6;
+  --va-olive:         #4b4b36;
+  --va-olive-hover:   #3a3a29;
+  --va-black:         #1d1c19;
+  --va-black-hover:   #000000;
+  --va-badge:         #dd8da0;
+  --va-star:          #c9a227;
+  --va-white:         #ffffff;
+
+  --va-font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --va-font-body:    'Lora', Georgia, serif;
+}
+
+/* ==========================================================================
+   Shop grid — ul.products > li.product
+   Number of columns is set in Customizer → WooCommerce → Product Catalog
+   (or Blocksy's shop options): use 3, as in the template.
+   ========================================================================== */
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  text-align: left;
+}
+
+/* Square, cropped product photos — photos don't need to be square going in. */
+.woocommerce ul.products li.product img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--va-border);
+  transition: transform 0.5s ease;
+}
+
+.woocommerce ul.products li.product a:has(img),
+.woocommerce ul.products li.product figure {
+  display: block;
+  overflow: hidden;
+}
+
+.woocommerce ul.products li.product:hover img { transform: scale(1.04); }
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  font-family: var(--va-font-body);
+  font-size: 0.86rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--va-text);
+  margin: 14px 0 6px;
+  padding: 0;
+}
+
+.woocommerce ul.products li.product .price {
+  display: block;
+  font-family: var(--va-font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--va-text);
+}
+
+/* Sale price: old price muted, new price normal. */
+.woocommerce ul.products li.product .price del,
+.woocommerce div.product .summary .price del {
+  color: var(--va-text-muted);
+  font-weight: 400;
+  margin-right: 6px;
+}
+.woocommerce .price ins { text-decoration: none; }
+
+/* "View more" equivalent: WooCommerce pagination */
+.woocommerce nav.woocommerce-pagination {
+  margin: 52px 0 8px;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce .button {
+  font-family: var(--va-font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  border-radius: 0;
+  transition: background-color 0.2s ease;
+}
+
+/* Add to cart (outlined) + Buy now (solid) sit side by side, equal width */
+.woocommerce div.product .single_add_to_cart_button {
+  background: transparent;
+  color: var(--va-black);
+  border: 1px solid var(--va-black);
+  padding: 15px 16px;
+  flex: 1 1 0;
+}
+.woocommerce div.product .single_add_to_cart_button:hover {
+  background: var(--va-black);
+  color: var(--va-white);
+}
+
+/* ==========================================================================
+   Single product page
+   ========================================================================== */
+.woocommerce div.product .product_title {
+  font-family: var(--va-font-display);
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.woocommerce div.product .summary .price {
+  font-family: var(--va-font-body);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--va-text);
+  margin-bottom: 12px;
+}
+
+/* Stock line ("1 in stock") as the pink pill from the template */
+.woocommerce div.product .stock.in-stock {
+  display: inline-block;
+  background: var(--va-badge);
+  color: var(--va-white);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin: 0 0 18px;
+}
+
+.woocommerce div.product .stock.out-of-stock {
+  color: var(--va-text-muted);
+  font-size: 0.85rem;
+}
+
+/* Quantity + Add to cart + Buy now. Variable/grouped forms also hold an
+   options table, so only their button row is laid out this way. */
+.woocommerce div.product form.cart { margin-bottom: 30px; }
+
+.woocommerce div.product form.cart:not(.variations_form):not(.grouped_form),
+.woocommerce div.product .woocommerce-variation-add-to-cart {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* "Buy now" (added by functions.php), next to Add to cart */
+.woocommerce div.product .va-buy-now-button {
+  flex: 1 1 0;
+  background: var(--va-black);
+  color: var(--va-white);
+  border: 1px solid var(--va-black);
+  padding: 15px 16px;
+  text-align: center;
+}
+.woocommerce div.product .va-buy-now-button:hover {
+  background: var(--va-black-hover);
+}
+
+.woocommerce div.product form.cart .quantity input {
+  height: 100%;
+  border: 1px solid var(--va-border);
+  background: transparent;
+}
+
+.woocommerce-product-details__short-description p {
+  font-size: 0.92rem;
+  line-height: 1.9;
+  margin-bottom: 1em;
+  color: var(--va-text);
+}
+
+/* SKU / categories / tags */
+.woocommerce div.product .product_meta {
+  margin: 26px 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--va-border);
+  font-size: 0.85rem;
+  line-height: 2;
+  color: var(--va-text-muted);
+}
+.woocommerce div.product .product_meta > span { display: block; }
+.woocommerce div.product .product_meta a { color: var(--va-text-muted); }
+.woocommerce div.product .product_meta a:hover { color: var(--va-olive); }
+
+/* "Please note" condition notice (added by functions.php) */
+.va-condition-notice {
+  margin: 26px 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--va-border);
+}
+
+.va-condition-notice h2 {
+  font-family: var(--va-font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin: 0 0 14px;
+}
+
+.va-condition-notice p {
+  font-size: 0.82rem;
+  line-height: 1.9;
+  color: var(--va-text-muted);
+  margin: 0 0 1em;
+}
+
+.va-back-to-shop {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: var(--va-text-muted);
+  border-bottom: 1px solid var(--va-border);
+  padding-bottom: 2px;
+}
+.va-back-to-shop:hover { color: var(--va-text); border-color: var(--va-text); }
+
+/* --- Gallery thumbnails (WooCommerce's default flexslider thumbs) --- */
+.woocommerce div.product .flex-control-thumbs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+.woocommerce div.product .flex-control-thumbs li { width: auto; float: none; margin: 0; }
+.woocommerce div.product .flex-control-thumbs img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  opacity: 0.7;
+  border: 1px solid transparent;
+}
+.woocommerce div.product .flex-control-thumbs img:hover,
+.woocommerce div.product .flex-control-thumbs img.flex-active {
+  opacity: 1;
+}
+.woocommerce div.product .flex-control-thumbs img.flex-active {
+  border-color: var(--va-olive);
+}
+
+/* --- Star rating (real WooCommerce reviews only) --- */
+.woocommerce .star-rating,
+.woocommerce .star-rating span::before { color: var(--va-star); }
+
+/* --- Related / up-sells / recently viewed headings --- */
+.woocommerce .related > h2,
+.woocommerce .up-sells > h2,
+.woocommerce .cross-sells > h2,
+.wc-block-recently-viewed-products h2 {
+  text-align: center;
+  font-family: var(--va-font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin: 4rem 0 1.75rem;
+}
+
+/* ==========================================================================
+   Category list (widget or block)
+   ========================================================================== */
+.widget_product_categories .widget-title,
+.widget_product_categories h2 {
+  text-align: center;
+  font-family: var(--va-font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.widget_product_categories li,
+.wc-block-product-categories-list-item {
+  border-bottom: 1px solid var(--va-border);
+  list-style: none;
+}
+
+.widget_product_categories a,
+.wc-block-product-categories-list-item a {
+  display: inline-block;
+  padding: 13px 4px;
+  font-size: 0.85rem;
+  color: var(--va-text-muted);
+  text-decoration: none;
+}
+.widget_product_categories a:hover,
+.wc-block-product-categories-list-item a:hover { color: var(--va-olive); }
+
+/* ==========================================================================
+   Responsive & motion
+   ========================================================================== */
+@media (max-width: 480px) {
+  .woocommerce div.product form.cart:not(.variations_form):not(.grouped_form),
+  .woocommerce div.product .woocommerce-variation-add-to-cart { flex-direction: column; }
+  .woocommerce div.product .single_add_to_cart_button,
+  .woocommerce div.product .va-buy-now-button { flex: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .woocommerce ul.products li.product img { transition: none; }
+}
+
+/* ==========================================================================
+   Home page — [vaisselle_home] (same look as the template's index.html)
+   In Blocksy, give the "Accueil" page no title and the normal content width.
+   ========================================================================== */
+html { scroll-behavior: smooth; }
+
+/* Banner */
+.va-home-hero {
+  position: relative;
+  aspect-ratio: 16 / 8;
+  min-height: 380px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--va-border);
+}
+
+.va-home-hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.va-home-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.va-home-hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding: 24px;
+}
+
+.va-home .va-home-hero__title {
+  font-family: var(--va-font-display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 4.6vw, 3.3rem);
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  color: var(--va-white);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.18);
+  margin: 0;
+}
+
+.va-home .va-home-hero__button {
+  display: inline-block;
+  background: transparent;
+  color: var(--va-white);
+  border: 1px solid var(--va-white);
+  font-family: var(--va-font-body);
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 13px 34px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.va-home .va-home-hero__button:hover {
+  background: var(--va-white);
+  color: var(--va-black);
+}
+
+/* Section titles */
+.va-home .va-section-title {
+  text-align: center;
+  font-family: var(--va-font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin: 4rem 0 1.75rem;
+  scroll-margin-top: 24px;
+}
+
+/* Product and category grids (override WooCommerce floats / clearfix) */
+.va-home ul.products {
+  display: grid;
+  gap: 34px 28px;
+  margin: 0;
+  padding: 0;
+}
+.va-home ul.products::before,
+.va-home ul.products::after { display: none; }
+.va-home ul.products.columns-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.va-home ul.products.columns-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px 18px; }
+.va-home ul.products li.product {
+  width: auto !important;
+  float: none !important;
+  margin: 0 !important;
+}
+
+/* Category tiles */
+.va-home .woocommerce-loop-category__title {
+  text-align: center;
+  font-family: var(--va-font-body);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--va-text);
+  margin: 14px 0 0;
+}
+.va-home .woocommerce-loop-category__title .count { display: none; }
+
+/* "Voir plus" (black button) and "Voir tout" (quiet underlined link) */
+.va-home-more {
+  text-align: center;
+  margin: 30px 0 8px;
+}
+
+.va-home .va-view-more {
+  display: inline-block;
+  background: var(--va-black);
+  color: var(--va-white);
+  font-family: var(--va-font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  padding: 14px 40px;
+  margin-top: 22px;
+  transition: background-color 0.2s ease;
+}
+.va-home .va-view-more:hover { background: var(--va-black-hover); }
+
+.va-home .va-view-all {
+  display: inline-block;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--va-text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--va-border);
+  padding-bottom: 2px;
+}
+.va-home .va-view-all:hover { color: var(--va-text); border-color: var(--va-text); }
+
+@media (max-width: 700px) {
+  /* Banner edge to edge and tall on phones */
+  .va-home-hero {
+    aspect-ratio: auto;
+    height: min(75vh, 580px);
+    min-height: 440px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+  .va-home .va-home-hero__title { font-size: clamp(2.2rem, 10vw, 2.9rem); }
+
+  .va-home ul.products.columns-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .va-home ul.products.columns-5 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  /* Category sections: one tidy row of 2 on phones */
+  .va-home-category ul.products > li:nth-child(n+3) { display: none; }
+}
+
+@media (max-width: 480px) {
+  .va-home .woocommerce-loop-category__title { font-size: 0.68rem; letter-spacing: 0.08em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* ==========================================================================
+   Blocksy adjustments (checked against Blocksy 2.1 + WooCommerce 11)
+   ========================================================================== */
+
+/* Product cards: square photos — Blocksy puts its own ratio inline on the img */
+.woocommerce ul.products li.product .ct-media-container,
+.woocommerce ul.products li.product figure { overflow: hidden; }
+.woocommerce ul.products li.product .ct-media-container img {
+  aspect-ratio: 1 / 1 !important;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Product cards: photo, name and price only (as in the template) —
+   no category line and no "Ajouter au panier" button on cards */
+.woocommerce ul.products li.product .entry-meta,
+.woocommerce ul.products li.product .ct-woo-card-actions { display: none !important; }
+
+/* Product page: Add to cart + Buy now side by side, equal width, one line */
+.woocommerce div.product form.cart .ct-cart-actions {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 12px;
+  flex: 1 1 100%;
+  width: 100%;
+}
+.woocommerce div.product form.cart .ct-cart-actions .single_add_to_cart_button,
+.woocommerce div.product form.cart .ct-cart-actions .va-buy-now-button {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  margin: 0;
+  white-space: nowrap;
+  min-height: 50px;
+}
+
+@media (max-width: 480px) {
+  .woocommerce div.product form.cart .ct-cart-actions { flex-direction: column; }
+  .woocommerce div.product form.cart .ct-cart-actions .single_add_to_cart_button,
+  .woocommerce div.product form.cart .ct-cart-actions .va-buy-now-button { flex: none; width: 100%; }
+}
+
+/* Product page main photo + thumbnails: square, as in the template */
+.woocommerce div.product .woocommerce-product-gallery .ct-media-container img,
+.woocommerce div.product .ct-product-gallery-container .ct-media-container img {
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover;
+}
